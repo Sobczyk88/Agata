@@ -1,0 +1,51 @@
+Ga³êzie
+Bardzo mocn¹ stron¹ gita jest ³atwoœæ tworzenia nowych ga³êzi kodu, a nastêpnie w³¹czanie tych zmian do g³ównej ga³êzi. Domyœlnie u¿ywana ga³¹Ÿ nazywa siê master.
+
+
+git branch nowa-super-funkcja   # utworzenie nowej ga³êzi
+git checkout nowa-super-funkcja # prze³¹czenie siê do tej ga³êzi
+[...]                           # twórcza praca nad now¹ super funkcj¹
+git commit -a                   # zatwierdzenie zmian
+git checkout master             # powrót do domyœlnej ga³êzi
+
+# je¿eli zmiany s¹ zadowalaj¹ce mo¿na je w³¹czyæ do domyœlnej ga³êzi
+git merge nowa-super-funkcja
+git branch -d nowa-super-funkcja
+
+# je¿eli nowa-super-funkcja nie jest a¿ tak super i lepiej ¿eby nikt jej
+# nigdy nie widzia³, mo¿na zlikwidowaæ ca³¹ ga³¹Ÿ bez œladów
+git branch -D nowa-super-funkcja
+
+Wska¿nik HEAD
+Sk¹d Git wie, na której ga³êzi siê aktualnie znajdujesz? Utrzymuje on specjalny wskaŸnik o nazwie HEAD. 
+Istotnym jest, ¿e bardzo ró¿ni siê on od koncepcji HEADa znanej z innych systemów kontroli wersji, do jakich 
+mog³eœ siê ju¿ przyzwyczaiæ, na przyk³ad Subversion czy CVS. W Gicie jest to wskaŸnik na lokaln¹ ga³¹Ÿ, na 
+której w³aœnie siê znajdujesz. W tym wypadku, wci¹¿ jesteœ na ga³êzi master. Polecenie git branch utworzy³o 
+jedynie now¹ ga³¹Ÿ, ale nie prze³¹czy³o ciê na ni¹
+
+Polecenia git zwi¹zane z ga³êziami i prac¹ na nich:
+Podstawowa obs³uga Gita mo¿e byæ nieco zagmatwana dla pocz¹tkuj¹cych. I tak:
+Tworzenie ga³êzi to "git checkout -b".
+"git branch" powinno byæ u¿ywane tylko do wylistowania i usuwania ga³êzi.
+Wspó³dzielisz swoj¹ pracê przez "git fetch" (pobranie) i "git push" (wys³anie). To s¹ przeciwieñstwa.
+"git pull" mo¿e równie¿ zrobiæ "git fetch" ale to jest opcjonalne.
+Wiêkszoœæ operacji wykonuje siê przez "git polecenie".
+Aby uzyskaæ pomoc na temat jakiegoœ polecenia wpisujemy "git help polecenie" lub "git --help".
+
+Obs³uga git w edytorze vim
+Uwaga! git nie dodaje pustych katalogów do repozytorium. To wynika z koncepcji, ¿e git œledzi zawartoœæ plików a nie pliki.
+mkdir git_repo   # tworzymy katalog w którym bêdzie nasze repozytorium plików, mo¿emy nazwaæ jak chcemy
+cd git_repo      # przechodzimy do tego katalogu
+git init         # inicjalizujemy bazê repozytorium (katalog .git)
+Teraz wgrywamy do tego katalogu pliki lub tworzymy nowe.
+git add .        # dodajemy wszystkie pliki do œledzenia z aktualnego katalogu, kropka oznacza w³aœnie katalog aktualny
+git status       # sprawdzamy status naszego repozytorium, to polecenie poka¿e które pliki zmienione, a które nowe
+git commit -a    # zatwierdzamy zmiany czyli wysy³amy pliki do bazy repozytorium
+Samo polecenie git commit zapisze tylko pliki, które zosta³y dodane poleceniem git add. Dlatego dodajemy -a, ¿eby nie dodawaæ rêcznie ka¿dego zmienionego pliku. Nowe pliki trzeba jednak dodaæ przez git add.
+git log          # sprawdzamy historiê zatwierdzeñ
+git whatchanged -p # historia zmian razem z diff
+git whatchanged --pretty=oneline # wyœwietla tylko nazwy zmienionych plików
+Jeœli chcemy, mo¿emy rozga³êziaæ nasz projekt tworz¹c ga³êzie. Domyœlnie nowy projekt jest w ga³êzi master. Wszystkie ga³êzie mo¿na wylistowaæ poleceniem
+git branch
+Znak * wskazuje aktualn¹ ga³¹Ÿ.
+Jeœli chcemy graficznie zobaczyæ nasze drzewo kodu, to trzeba u¿yæ polecenia gitk (w gentoo "gitview")
