@@ -1,0 +1,22 @@
+ Wypisz komendy linii poleceñ umo¿liwiaj¹ce:
+
+a).wyœwietlenie informacji o poleceniach (pomocy) -help
+b).wyœwietlanie zawartoœci bie¿¹cego katalogu- ls
+c).utworzenie katalogu o nazwie 'katalog'- mkdir katalog
+d).utworzenia pliku o nazwie 'plik.txt'- touch plik.txt
+e).wyœwietlenie zawartoœci pliku 'plik.txt'- cat plik.txt
+f).przejœcie do katalogu nadrzêdnego- cd..
+g).przejœcie do katalogu 'lab4'- cd lab4
+h).zmianê nazwy pliku 'plik.txt' na 'inny_plik.txt'- ren c:\plik.txt c:\inny_plik.txt'
+
+ Podaj komendy gita s³u¿¹c¹ do:
+
+a).podgl¹du wszystkich zatwierdzonych zmian- git logg
+b).podgl¹du wprowadzonych w repozytorium zmian- git diff
+c).podgl¹du wprowadzonych zmian plików które s¹ juz w przechowalni- git diff-staged
+d).podgl¹du zmian wprowadzonych w danym pliku- git status
+e).usuwania plików z repozytorium- git rm
+f).dodawanie plików do przechowalni- git add
+i).usuwanie plików z przechowalni- git reset
+j).przenoszenia plików znajduj¹cych siê w przechowalni do innej ga³êzi- git stach
+k).usuwania ga³êzi- git branch -d
