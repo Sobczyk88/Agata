@@ -1,0 +1,31 @@
+Diagramy sekwencji.
+Diagram sekwencji jest kolejnym elementem modelu zorientowanego obiektowo. Diagram 
+przedstawia obiekty (instancje klas), stanowi¹ce sk³adowe jakiegoœ systemu oraz komunikaty 
+wymieniane pomiêdzy nimi w celu realizacji danego zadania. Diagram mo¿e, ale nie musi, zawieraæ 
+równie¿ aktorów, oraz opisywaæ ich interakcjê z systemem. 
+Elementy graficzne diagramu sekwencji to: aktor, obiekt, komunikat. 
+Diagram sekwencji ma dwa wymiary: 
+• Wymiar pionowy stanowi oœ czasu – komunikaty po³o¿one ni¿ej realizowane s¹ póŸniej, 
+• Wymiar poziomy przedstawia role obiektów pomiêdzy którymi trwa okreœlona komunikacja.
+Diagram sekwencji reprezentuje zachowanie systemu pod k¹tem interakcji. Uzupe³nia diagram klas, 
+który reprezentuje statyczn¹ strukturê systemu. Diagram sekwencji jest dynamiczny: opisuje 
+zachowanie klas, interfejsów oraz mo¿liwe zastosowanie ich operacji (metod). 
+Diagram tego typu precyzuje role obiektów w uk³adzie chronologicznym w oparciu o zdarzenia. 
+Tworzenie modelu systemu rozpoczyna siê zwykle od diagramu przypadków u¿ycia, na którego 
+podstawie identyfikuje siê klasy, wykorzystywane póŸniej w diagramie klas. Nastêpnie tworzone s¹ 
+diagramy sekwencji, których celem jest wskazanie interakcji pomiêdzy obiektami bior¹cymi udzia³ w 
+przypadku u¿ycia. 
+Aktor w diagramie sekwencji jest reprezentacj¹ zewnêtrznego u¿ytkownika (lub ich grupy), którzy 
+oddzia³ywaj¹ na system. Aktor, podobnie jak obiekty, ma oœ czasu. Je¿eli aktor jest Ÿród³em interakcji
+(a tak najczêœciej jest) to usytuowany jest w brzegowej (skrajnej lewej lub prawej) czêœci systemu. Dla 
+aktora ustawiæ mo¿na parametry: nazwa, kod, komentarz. Obiekt jest instancj¹ klasy i tak jak aktor jest po³¹czony z osi¹ czasu. Je¿eli obiekt jest tworzony b¹dŸ 
+niszczony, jest to zaznaczone na osi czasu. Parametry obiektów s¹ takie jak dla aktora (nazwa, kod, 
+komentarz), dodatkowo ustawiæ mo¿emy pole Classifier, które okreœla nazwê klasy, której instancj¹ 
+jest obiekt. Je¿eli jeszcze nie istnieje dana klasa, mo¿emy j¹ stworzyæ na podstawie obiektu klikaj¹c 
+na „Create Class”. 
+Mo¿liwe jest przeci¹ganie symbolu klasy z drzewa obiektów do przestrzeni roboczej – wtedy 
+automatycznie tworzona jest instancja tej klasy. 
+Komunikaty posiadaj¹ nadawcê, odbiorcê i akcjê, czyli treœæ informacji, która pojawia siê nad 
+symbolem strza³ki. Tworz¹c komunikat okreœliæ mo¿na te¿ tzw. aktywacjê (activation), która 
+reprezentuje czas wykonywania czynnoœci przez obiekt. Aktywacja nie posiada w³asnej listy 
+w³aœciwoœci, jedynie graficzn¹ reprezentacjê w postaci prostok¹ta.
